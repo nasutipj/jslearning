@@ -1,0 +1,133 @@
+<html>
+	<head>
+		<title>JS Learning 1</title>
+	</head>
+	<body>
+		<script>
+		
+			/**
+			 * Hey Pete, answer all the questions in this file. If you have node installed you should be able
+			 * to run node leTest1.js which should run the code contained within
+			 *
+			 * TRY TO NOT LOOK UP ANSWERS. If you do look something up please say you did.
+			 * Try to answer everything even if you have no clue. ZE LEARNING!
+			 */
+
+			// 1) Explain why the following code behaves the way it does. Solve the lobBob()
+			// expected logging three different ways.
+
+			var bob = 'bob';
+			function logBob() {
+			  var bob = 'frank';
+			  console.log(bob);
+			}
+			logBob(); // Expected bob
+			console.log(bob); // logs bob
+			console.log('##################\n');
+		
+		
+			function loopTest() {
+			  for (var i = 0; i < 10; i++) {
+				console.log('iteration', i);
+			  }
+			  console.log('Final value is: ', i); // Why is the final value what it is? Is it what you expected?
+			}
+			loopTest();
+			console.log('##################');
+			
+			
+			function double() {
+			  console.log('Whaaaaat?', isaNumber);
+			  var isaNumber = 3;
+			  console.log(isaNumber);
+			}
+			double();
+			console.log('##################');
+			
+			// For loop
+			var runNum = 1;
+			function forLoop() {
+				for (var num = 15; num >=5; num--) {
+					console.log('This is run number ' + runNum + ', and the num value is ' + num);
+					runNum++;
+				}
+			}
+			forLoop();
+			console.log('##################');
+			
+			
+			// While loop
+			var i = 10;
+			function whileLoop() {
+				while (i > 0) {
+					console.log('i is ' + i);
+					i--;
+				}
+			}
+			whileLoop();
+			console.log('##################');
+			
+			
+			// Switch statement
+			// !!! Had to look up switch statement, did it before going through book but forgot it
+			//UNCOMMENT BELOW FOR SWITCH
+			/*var switchNumber = prompt("Pick a number between 1 and 10");
+			switchNumber = parseInt(switchNumber, 10);
+			switch (switchNumber) {
+				case 1:
+					console.log("You entered 1!");
+					break;
+				case 2:
+				case 8:
+					console.log("You entered between 2 and 8");
+					break;
+				default:
+					console.log("You entered 9 - 10");
+					break;
+			}
+			console.log('##################');
+			*/
+			
+			
+			// Do-while
+			// !!! Had to look it up, never done before:
+			var myName = "Peter";
+			var num = 1;
+			do {
+				console.log("the name is " + myName + " and the number is " + num)
+				num++;
+			} while (num <=10);
+			console.log('##################');
+			
+			
+			
+			// if, else-if, else logic
+			// !!! Had to review online but have done before
+			//UNCOMMENT BELOW FOR IF ELIF ELSE
+			/* 
+			var userVariable = prompt("Enter a number between 0 and 10");
+			userVariable = parseInt(userVariable, 10);
+
+			function checkNumberAndReport(inputNumber) {
+				if (inputNumber <=3) {
+					console.log("The number is less than or equal to three");
+				} else if (8 > inputNumber > 3) {
+					console.log("The number is greater than three and less than 8");
+				} else {
+					console.log("The number is greater than or equal to 8");
+				}
+			}
+			checkNumberAndReport(userVariable);
+			*/
+			console.log('##################');
+			
+			
+			console.log('Below is modulo testing: ');
+			console.log(5 % 3);
+			console.log('##################');
+			console.log('##################');
+			console.log('##################');
+			console.log('##################');
+			console.log('##################');
+		</script>
+	</body>

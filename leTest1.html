@@ -125,9 +125,86 @@
 			console.log('Below is modulo testing: ');
 			console.log(5 % 3);
 			console.log('##################');
+			
+			// 6) Create an array, a multidimensional array, and a jagged array!
+			var simpleArray = [];
+			simpleArray[0] = "peter";
+			simpleArray[1] = "turkey";
+			simpleArray[2] = "tom";
+			console.log(simpleArray);
+			
+			var multiArray = simpleArray;
+			multiArray[0][0] = "peterchild";
+			multiArray[0][0][0] = "petergrandchild";
+			multiArray[1][0] = "turkeychild";
+			multiArray[1][1] = "flamingochild";
+			multiArray[1][0][0] = "turkeygrandchild";
+			multiArray[2][0] = "tomchild";
+			multiArray[2][0][0] = "tomgrandchild";
+			//alert(multiArray);
+			console.log(multiArray.toString());
 			console.log('##################');
+			
+			// 8) Functions are wonderful things! Give me the following examples!
+			
+			// Double a number and return the result!
+			/*
+			function doubleNum(number) {
+				number = number * 2;
+				return number;
+				console.log(number);
+			}
+			var userIn = prompt("Enter a number");
+			userIn = parseInt(userIn, 10);
+			output = doubleNum(userIn);
+			console.log(output);
 			console.log('##################');
+			*/
+			
+			// Return a string greeting!
+			/*
+			function greet(user) {
+				alert("Hello visitor, you claim your name is " + user);
+			}
+			var visitor = prompt("Tell me your name visitor");
+			greet(visitor);
 			console.log('##################');
+			*/
+			
+			// A function that returns an array...
+			var numArrayElements = 5;
+			function createArrayByNum(numArrayElements) {
+				var createdArray = [];
+				for (var i = 0; i <= numArrayElements; i++) {
+					createdArray[i] = "arrayElementNumber" + i;
+				}
+				return createdArray;
+			}
+			console.log(createArrayByNum(numArrayElements));
+			console.log('##################');
+			
+			
+			// A function that returns an OBJECT......
+			function createBoatObject(detailsArray) {
+				var boatsObject = new Object();
+				boatsObject.boatId = detailsArray[0];
+				boatsObject.boatType = detailsArray[1];
+				boatsObject.boatAge = detailsArray[2];
+				boatsObject.boatLength = detailsArray[3];
+				return boatsObject;
+			}
+			var id = prompt("Enter unique ID of the boat");
+			var type = prompt("Enter the type of the boat");
+			var age = prompt("Enter the age of the boat");
+			var length = prompt("Enter the length of the boat");
+			var detailsArray = [];
+			detailsArray[0] = id;
+			detailsArray[1] = type;
+			detailsArray[2] = age;
+			detailsArray[3] = length;
+			var outputObject = createBoatObject(detailsArray);
+			console.log(outputObject);
 			console.log('##################');
 		</script>
 	</body>
+</html>

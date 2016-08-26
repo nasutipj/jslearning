@@ -143,14 +143,26 @@ console.log('##################');
 */
 
 console.log('Below is modulo testing: ');
-console.log(5 % 3);
+console.log(5 % 3); // This logs 2, awesome!
 console.log('##################');
 
 // 6) Create an array, a multidimensional array, and a jagged array!
-
-
-
+var simpleArray = [];
+simpleArray[0] = "peter";
+simpleArray[1] = "turkey";
+simpleArray[2] = "tom";
+console.log(simpleArray);
 console.log('##################');
+
+var multiArray = simpleArray;
+multiArray[0][0] = "peterchild";
+multiArray[0][0][0] = "petergrandchild";
+multiArray[1][0] = "turkeychild";
+multiArray[1][1] = "flamingochild";
+multiArray[1][0][0] = "turkeygrandchild";
+multiArray[2][0] = "tomchild";
+multiArray[2][0][0] = "tomgrandchild";
+console.log(multiArray);
 
 // 7) Create an object that contains at least: An array, a string, an integer, a float, an object, anddddddddddd a function!
 
@@ -161,15 +173,53 @@ console.log('##################');
 
 // Double a number and return the result!
 function doubleNum(number) {
-	
+	number = number * 2;
+	return number;
+	console.log(number);
+}
+var userIn = prompt("Enter a number");
+userIn = parseInt(userIn, 10);
+doubleNum(userIn);
 
 // Return a string greeting!
-
+function greet(user) {
+	alert("Hello visitor, you claim your name is " + user);
+}
+var visitor = prompt("Tell me your name visitor");
+greet(visitor);
 
 // A function that returns an array...
+var numArrayElements = 5;
+function createArrayByNum(numArrayElements) {
+	var createdArray = [];
+	for (var i = 0; i <= numArrayElements; i++) {
+		createdArray[i] = "arrayElementNumber" + i;
+	}
+	return createdArray;
+}
+console.log(createArrayByNum(numArrayElements));
 
-
+	
 // A function that returns an OBJECT......
+function createBoatObject(detailsArray) {
+	var boatsObject = new Object();
+	boatsObject.boatId = detailsArray[0];
+	boatsObject.boatType = detailsArray[1];
+	boatsObject.boatAge = detailsArray[2];
+	boatsObject.boatLength = detailsArray[3];
+	return boatsObject;
+}
+var id = prompt("Enter unique ID of the boat");
+var type = prompt("Enter the type of the boat");
+var age = prompt("Enter the age of the boat");
+var length = prompt("Enter the length of the boat");
+var detailsArray = [];
+detailsArray[0] = id;
+detailsArray[1] = type;
+detailsArray[2] = age;
+detailsArray[3] = length;
+var outputObject = createBoatObject(detailsArray);
+console.log(outputObject);
 
 
 // A function that returns a function!!!!!!! (yes functions can return functions!)
@@ -190,3 +240,55 @@ console.log('##################');
 // Now here's the tricky part.......
 //
 // Solve the above three different ways. You have all the tools you need from the other questions here.
+
+//METHOD 1 (not great):
+var num = prompt("Enter a number to test the FizzBuzzer");
+function fizzBuzz(num) {
+	var by3 = (num % 3);
+	var by5 = (num % 5);
+	
+	if (by3 == 0) {
+		var by3yes = 1;
+	} else {
+		by3yes = 0;
+	}
+	
+	if (by5 == 0) {
+		var by5yes = 1;
+	} else {
+		by5yes = 0;
+	}
+	
+	var fizzBuzzCheck = by3yes + by2yes;
+	
+	if (fizzBuzzCheck == 2) {
+		console.log("FIZZBUZZ DING DING DING!!!");
+	} else if (by3yes == 1) {
+		console.log("FIZZ");
+	} else if (by5yes == 1) {
+		console.log("BUZZ");
+	} else {
+		console.log("NEITHER FIZZ NOR BUZZ");
+	}			
+}
+fizzBuzz(num);
+
+
+//METHOD 2 (better):
+var num = prompt("Enter a number to test the FizzBuzzer");
+function fizzBuzz(num) {
+	var by3 = (num % 3);
+	var by5 = (num % 5);
+	
+	if (by3 == 0 & by5 == 0) {
+		console.log("FIZZBUZZ DING DING DING!!!");
+	} else if (by3 == 0) {
+		console.log("FIZZ");
+	} else if (by5 == 0) {
+		console.log("BUZZ");
+	} else {
+		console.log("Neither Fizz Nor Bizz");
+	}	
+}
+fizzBuzz(num);
+
